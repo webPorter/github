@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#box {
+    /* background-color: red; */
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.meBox {
+    float: left;
+    width: 25rem;
+    height: 30rem;
+    background-color: #eceff1;
+    margin-left: 10%;
+    border-radius: 2%;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.meBox:hover {
+    width: 26rem;
+    height: 31rem;
+    margin: 0 0 0 9.5%;
+}
+
+
+.meBox-title {
+    width: auto;
+    margin: 0 auto 5px;
+}
+
+
+.meBox-title p {
+    font-size: 1.2rem;
+    border-right: .1em solid;
+    width: 12ch;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 10px 0 0 90px;
+    transition: all 0.3s;
+}
+
+
+.meBox-title .fg {
+    width: 80%;
+    height: 2px;
+    background-image: linear-gradient(to left, #3498db, #2980b9);
+    margin: 2px 0 0 10%;
+}
+
+
+#cmdBox {
+    width: 710px;
+    height: 550px;
+    float: right;
+    margin-right: 5%;
+    /* background-color: green; */
+}
+
+.cmd {
+    width: 600px;
+    height: 400px;
+    border-radius: 10px 10px 5px 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgba(167, 161, 161, 0.9);
+    transition: all 0.3s;
+    font-size: 14px;
+    color: rgb(88, 89, 92);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.cmd:hover {
+    width: 610px;
+    height: 410px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin: -5px 0 0 -5px;
+    z-index: 1;
+}
+
+.cmd .title {
+    width: 100%;
+    height: 25px;
+    background-image: linear-gradient(to top, rgb(32, 31, 31), rgb(78, 76, 76));
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.cmd .title span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.cmdText {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.cmd2 {
+    position: relative;
+    top: -280px;
+    left: 100px;
+}
+
+.cmd1 .cmdText .ul {
+    margin-left: 15px;
+}
+
+.cmd1 .cmdText .ul a {
+    text-decoration: none;
+    color: rgb(88, 89, 92);
+}
+
+.cmd1 .cmdText .ul a:hover {
+    color: rgb(0, 132, 255);
+}
+
+#footer {
+    width: 100%;
+    color: white;
+    float: left;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 30px;
+    /* background-color: blue; */
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer a:hover {
+    color: rgb(0, 81, 255);
+}
+
+/* 自适应 */
+@media screen and (max-width: 1320px)
+{
+    .meBox {
+        margin-left: 3%;
+    }
+
+    .meBox:hover {
+        margin: 0 0 0 2.5%;
+    }
+
+    #cmdBox {
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    .meBox {
+        width: 23rem;
+        height: 28rem;
+        margin-left: 0%;
+    }
+
+    .meBox:hover {
+        width: 23rem;
+        height: 29rem;
+        margin: 0;
+    }
+
+    #iframe{
+        height: 350px;
+    }
+
+    #cmdBox {
+        margin-right: 0%;
+    }
+}
+
+
+@media screen and (max-width: 1090px)
+{
+    #iframe{
+        height: 380px;
+    }
+
+    .meBox {
+        width: 25rem;
+        height: 30rem;
+        margin: 100px auto 100px;
+        float: none;
+    }
+
+    .meBox:hover {
+        width: 26rem;
+        height: 31rem;
+        margin: 100px auto 100px;
+        float: none;
+    }
+
+    #cmdBox {
+        width: 700px;
+        height: 850px;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .cmd {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cmd2 {
+        position: relative;
+        top: 20px;
+        left: 0;
+    }
+
+    .cmd:hover {
+        width: 90%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        margin: 0 auto;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    #cmdBox {
+        width: 100%;
+        height: 850px;
+    }
+
+    .cmd {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cmd2 {
+        position: relative;
+        top: 20px;
+        left: 0;
+    }
+
+    .cmd:hover {
+        width: 90%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        margin: 0 auto;
+        z-index: 1;
+    }
+}
+
+
+@media screen and (max-width: 450px)
+{
+    .meBox {
+        width: 95%;
+    }
+
+    .meBox:hover {
+        width: 98%;
+    }
+}

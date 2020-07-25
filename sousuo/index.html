@@ -1,84 +1,230 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>弹出</title>
-    <link rel="stylesheet" href="search/bootstrap.min.css">
-    <script src="search/jquery.min.js"></script>
-    <link href="search/style.css" type="text/css" rel="stylesheet" />
-    
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+    <title>webporter | 吃饭不吃亏</title>
+    <link rel="stylesheet" type="text/css" href="./css/FiraCode.css">
+    <link rel="stylesheet" type="text/css" href="./css/nutssss.css">
+    <link rel="stylesheet" type="text/css" href="./css/btn-div.css">
+    <link rel="icon" href="./favicon.ico">
+    <script src="http://at.alicdn.com/t/font_1911700_vt0duyehyhl.js"></script>
+
+    <style>
+        .icon {
+            width: 1.25em; height: 1.25em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- 弹出窗 -->
+    <link rel="stylesheet" href="search/eject/bootstrap.min.css">
+    <img class="sobtn" src="search/eject/search.png" style="width: 30px; position: fixed; right: 10px; top: 10px;">
 
-    <img class="sobtn" style="width: 50px;" src="search/search.png">
+    <script src="search/eject/jquery.min.js"></script>
+    <link href="search/eject/style.css" type="text/css" rel="stylesheet" />
+    <script src="search/eject/GeeYo.js"></script>
 
-   
-<!-- 弹出层 -->
-<div class="so">
-    <i class="iconfont" title="关闭">×</i>
-        <div id="menu"><i></i></div>
-		<div class="list closed">
-			<ul>
-			</ul>
-		</div>
-		<div id="content">
-			<div class="con">
-				<div class="shlogo">
-					<div class="logo-text embed">垃圾&nbsp;&nbsp;搜索</div>
-				</div>
-				<section class="sousuo">
-					<div class="search">
-						<div class="search-box">
-							<svg class="icon" id="search-icon" aria-hidden="true">
-								<use xlink:href="#icon-baidu"></use>
-							</svg>
-							<input type="text" id="txt" class="search-input" autocomplete="off" autofocus="autofocus" placeholder="百度搜索" />
-							<svg class="icon" aria-hidden="true" id="search-clear" style="display: none;">
-								<use xlink:href="#icon-shanchu"></use>
-							</svg>
-						</div>
-						<!-- 搜索热词 -->
-						<div class="box search-hot-text" id="box" style="display: none;">
-							<ul></ul>
-						</div>
-						<!-- 搜索引擎 -->
-						<div class="search-engine" style="display: none;">
-							<div class="search-engine-head">
-								<strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
-								<div class="search-engine-tool">
-									搜索热词：<label class="switch">
-										<input id="hot-btn" type="checkbox">
-										<div class="slider round"></div>
-									</label>
-								</div>
-							</div>
-							<ul class="search-engine-list"></ul>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-</div>
-
-   
+    <link href="search/content/style.min.css" rel="stylesheet">
+    <script src="search/content/sou.min.js"></script>
+    <link rel="stylesheet" href="search/content/search.min.css" />
+    <script src="search/content/search.min.js"> </script>
     
-    <script src="search/GeeYo.js"></script>
-   
+    <div class="so">
+        <i class="shutdown-eject" title="关闭">×</i>
+            <div id="menu"><i></i></div>
+            <div class="list closed">
+                <ul>
+                </ul>
+            </div>
+            <div id="content">
+                <div class="con">
+                    <div class="shlogo">
+                        <div class="logo-text embed">垃圾&nbsp;&nbsp;搜索</div>
+                    </div>
+                    <section class="sousuo">
+                        <div class="search">
+                            <div class="search-box">
+                                <svg class="icon" id="search-icon" aria-hidden="true">
+                                    <use xlink:href="#icon-baidu"></use>
+                                </svg>
+                                <input type="text" id="txt" class="search-input" autocomplete="off" autofocus="autofocus" placeholder="百度搜索" />
+                                <svg class="icon" aria-hidden="true" id="search-clear" style="display: none;">
+                                    <use xlink:href="#icon-shanchu"></use>
+                                </svg>
+                            </div>
+                            <!-- 搜索热词 -->
+                            <div class="box search-hot-text" id="box" style="display: none;">
+                                <ul></ul>
+                            </div>
+                            <!-- 搜索引擎 -->
+                            <div class="search-engine" style="display: none;">
+                                <div class="search-engine-head">
+                                    <strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
+                                    <div class="search-engine-tool">
+                                        搜索热词：<label class="switch">
+                                            <input id="hot-btn" type="checkbox">
+                                            <div class="slider round"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="search-engine-list"></ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+    </div>
+
+
+
+
+    <!-- Aplayer音乐     -->
+    <link rel="stylesheet" href="Aplayer/APlayer.min.css">
+    <div id="aplayer"></div>
+    <script src="Aplayer/APlayer.min.js"></script>
+    <script src="Aplayer/data.js"></script>
+
+    <div id="box">
+        <!-- 聊天留言卡片 -->
+        <div class="meBox">
+            
+            <!-- 介绍 -->
+            <div class="meBox-title">
+                <p>留言&nbsp;<small style="font-size: 10px; color: rgb(177, 180, 179);">可保留50条</small></p>
+                <div class="fg"></div>
+            </div>
+                <iframe id="iframe" src="http://chat.crcce.xyz" width="100%" height="380px" frameborder="no" scrolling="no"></iframe>
+            <div>
+                <p><span id="span" style="color: rgb(134, 134, 132); display: block; margin: 20px auto 0;">本站已运行: 00天0小时00分00秒</span></p>
+                <script src="js/timing.js"></script>
+            </div>   
+
+        </div>
+
+        <!-- 伪终端介绍 -->
+        <div id="cmdBox">
+            <!-- 第一个终端 -->
+            <div class="cmd cmd1">
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>收藏 - 书签</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+
+                    <span style="color: rgb(245, 250, 176);">---</span>
+                    <span style="color: rgb(77, 76, 20);">工具</span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibiaoti--"></use>
+                    </svg>
+                    <ul class="ul">
+                        <li><a href="https://epub.yunser.com/" target="_blank">阅读</a></li>
+                        <li><a href="https://fileroom.io/" target="_blank">传输</a></li>
+                    </ul>
+
+                    
+                    <span style="display: block; clear: both;"></span><br>
+                    <span style="color: rgb(245, 250, 176);">---</span>
+                    <span style="color: rgb(87, 86, 32);">分享</span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-fenxiang"></use>
+                    </svg>
+                    <ul class="ul">
+                        <li><a href="https://www.baidu.com/" target="_blank">音乐</a></li>
+						<li><a href="http://rise-wind.xuehu.biz/" target="_blank">图片</a></li>
+                    </ul>
+
+                </div> 
+            </div>
+
+
+            <!-- 第二个终端 -->
+            <div class="cmd cmd2">
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>项目 - 个人 - 永久</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(245, 250, 176);">---</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(134, 7, 7); font-weight: bold;">天气</span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yu"></use>
+                    </svg>
+                    <br />
+                    <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tc&skin=pitaya" frameborder="0"
+                        width="350" height="24" allowtransparency="true"></iframe>
+                    <br />
+                    
+                    <span style="color: rgb(245, 250, 176);">---</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(134, 7, 7); font-weight: bold;">时间</span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-shijian"></use>
+                    </svg>
+                    <p>
+                    <script type="text/javascript">
+                        var myDate = new Date();
+                        document.write(myDate.toLocaleString())
+                    </script>
+                    </p>
+                    <br>
+                    <span style="color: rgb(245, 250, 176);">---</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(134, 7, 7); font-weight: bold;">项目列表</span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xiangmu"></use>
+                    </svg>
+                        <br>
+                        <span style="color: blue;">-</span>
+                        <span style="color: rgb(134, 7, 7);">.进行.项目</span>
+                        <br>
+                        <div id="btn-div"><a href="https://blog.crcce.xyz/" target="_blank">博客</a></div>
+                        <div id="btn-div"><a href="https://media.crcce.xyz/m1/" target="_blank">音乐</a></div>
+                        <div id="btn-div"><a href="https://media.crcce.xyz/v1/" target="_blank">视频</a></div>
+                        
+
+                        <span style="display: block; clear: both;"></span>
+                        <span style="color: blue;">-</span>
+                        <span style="color: rgb(134, 7, 7);">.动态.完成.项目</span>
+                        <br>
+                        <div id="btn-div"><a href="http://note.crcce.xyz/" target="_blank">笔记</a></div>
+                        <div id="btn-div"><a href="http://bbs.crcce.xyz/" target="_blank">论坛</a></div>
+                        <div id="btn-div"><a href="http://wall.crcce.xyz/" target="_blank">上墙</a></div>
+                        <div id="btn-div"><a href="http://php.crcce.xyz/p1/" target="_blank">音色</a></div>
+                        <div id="btn-div"><a href="http://php.crcce.xyz/p2/" target="_blank">哔哔</a></div>
+                        <div id="btn-div"><a href="http://php.crcce.xyz/p3/" target="_blank">投票</a></div>
+
+                        
+                        <span style="display: block; clear: both;"></span>
+                        <span style="color: blue;">-</span>
+                        <span style="color: rgb(134, 7, 7);">.静态.完成.项目</span>
+                        <br>
+                        <div id="btn-div"><a href="https://page.crcce.xyz/p1/" target="_blank">搜索</a></div>
+                        <div id="btn-div"><a href="https://page.crcce.xyz/p2/" target="_blank">密码</a></div>
+                        
+
+                        <br>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div id="footer">
+        <!--
+        <p>© 2020 NUTSSSS | <a href="http://beian.miit.gov.cn">湘ICP备18015792号</a></p>
+        <p>THEME MADE BY <a href="https://nutssss.cn/">Nutssss</a></p>
+        -->             
+    </div>
 </body>
-
 </html>
-
-
-<!--QQ应用模式-->
-<link href="font/embed.css" rel="stylesheet">
-<link href="css/style.min.css" rel="stylesheet">
-<script src="https://at.alicdn.com/t/font_1592760_frznr49dvo.js"></script>
-<script src="https://at.alicdn.com/t/font_1592665_8irfenx66gf.js"></script>
-<script src="js/sou.min.js"></script>
-<link rel="stylesheet" href="css/search.min.css" />
-
-
-<script src=" ./js/search.min.js"> </script>
-	<script src=" ./js/jsonload.js"> </script>

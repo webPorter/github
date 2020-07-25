@@ -1,0 +1,26 @@
+#btn-div{
+    width: 30px; 
+    height: 18px; 
+    background: rgba(110, 110, 112, 0.288);
+    margin: 2px 5px;
+    float: left;
+ 
+    padding: 5px 10px;
+}
+
+#btn-div a{
+    color: rgb(6, 7, 5);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#btn-div a:hover {
+    color: rgb(0, 132, 255);
+}
+
+.cmd1 .cmdText .ul li {
+    margin-left: 15px;
+    float: left;
+    margin:1px 5px;
+    list-style:none;
+}
