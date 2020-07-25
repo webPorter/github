@@ -1,38 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Github项目</title>
-</head>
-<body>
-	<h1>测试项目目录</h>
-		<br><br>
-	<div>
-		<div class="outer"> 
-			<span class="nav" style="font-weight: 500;">列表</span>
-			<span class="nav" style="width: 500px; font-weight: 500;">说明</span>
-		</div>
-		<div class="outer">
-			<span class="nav"><a href="mikutap" target="_block">点击音效</a></span>
-			<span class="note">随意点击、敲打，会有对应的音效和动画响应，很酷炫</span>
-		</div>i
-		<div class="outer">
-			<span class="nav"><a href="music-index" target="_block">音乐主页</a></span>
-			<span class="note">一个带有音乐的主页，还附有轮播效果</span>
-		</div>
-		<div class="outer">
-			<span class="nav"><a href="compass" target="_block">罗盘时钟</a></span>
-			<span class="note">动态的罗盘时钟，一个比较好看的时钟动画</span>
-		</div>
-		<div class="outer">
-			<span class="nav"><a href="sousuo" target="_block">搜索引擎</a></span>
-			<span class="note">测试用</span>
-		</div>
-	</div>
+﻿<!DOCTYPE html>
+<html>
 
-	<br><br><br>
-	<p style="font-size: 10px;">更多访问<a style="font-size: 10px;" href="https://github.com/webPorter/github" target="_block">GitHub地址</a></p>
+<head>
+    <meta charset="UTF-8">
+    <title>弹出</title>
+    <link rel="stylesheet" href="eject/bootstrap.min.css">
+    <script src="eject/jquery.min.js"></script>
+    <link href="eject/style.css" type="text/css" rel="stylesheet" />
+    
+</head>
+
+<body>
+
+    <img class="sobtn" style="width: 50px;" src="eject/search.png">
+
+   
+<!-- 弹出层 -->
+<div class="so">
+    <i class="shutdown-eject" title="关闭">×</i>
+        <div id="menu"><i></i></div>
+		<div class="list closed">
+			<ul>
+			</ul>
+		</div>
+		<div id="content">
+			<div class="con">
+				<div class="shlogo">
+					<div class="logo-text embed">垃圾&nbsp;&nbsp;搜索</div>
+				</div>
+				<section class="sousuo">
+					<div class="search">
+						<div class="search-box">
+							<svg class="icon" id="search-icon" aria-hidden="true">
+								<use xlink:href="#icon-baidu"></use>
+							</svg>
+							<input type="text" id="txt" class="search-input" autocomplete="off" autofocus="autofocus" placeholder="百度搜索" />
+							<svg class="icon" aria-hidden="true" id="search-clear" style="display: none;">
+								<use xlink:href="#icon-shanchu"></use>
+							</svg>
+						</div>
+						<!-- 搜索热词 -->
+						<div class="box search-hot-text" id="box" style="display: none;">
+							<ul></ul>
+						</div>
+						<!-- 搜索引擎 -->
+						<div class="search-engine" style="display: none;">
+							<div class="search-engine-head">
+								<strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
+								<div class="search-engine-tool">
+									搜索热词：<label class="switch">
+										<input id="hot-btn" type="checkbox">
+										<div class="slider round"></div>
+									</label>
+								</div>
+							</div>
+							<ul class="search-engine-list"></ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+</div>
+
+   
+    
+    <script src="eject/GeeYo.js"></script>
+   
 </body>
+
 </html>
+
+
+<!--QQ应用模式-->
+<link href="content/style.min.css" rel="stylesheet">
+<script src="content/sou.min.js"></script>
+<link rel="stylesheet" href="content/search.min.css" />
+
+
+<script src="content/search.min.js"> </script>
